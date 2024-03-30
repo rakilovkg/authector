@@ -1,68 +1,206 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+  
+  /* Body styles */
+  html, body {
+    background-color: #cfcfcf;
+    color: #333;
+    line-height: 1.6;
+    height: 100%;
+  }
+
+  #root {
+    height: 100%;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 2em;
+    }
+  }
+  
+  /* Button styles */
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 15px 10px;
+  }
+
+  .btn-fold {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #545b62;
+  }
+  
+  /* Input and form field styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Checkbox and radio button styles */
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* File input style */
+  input[type="file"] {
+    display: none;
+  }
+  
+  .file-upload-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .file-upload-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .file-upload-label {
+    font-size: 1em;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
+  /* Placeholder style */
+  input::placeholder,
+  textarea::placeholder {
+    color: #999;
+  }
+
+  #defaultLayout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
   a:hover {
-    color: #747bff;
+    background-color: rgb(22, 101, 181);
   }
-  button {
-    background-color: #f9f9f9;
+  
+  aside {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
   }
-}
+
+  header {
+    color: white;
+    background-color: #222;
+    padding: 25px;
+  }
+
+  .form-container {
+    height: 100%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-signup-form {
+    max-width: 75%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(110, 37, 147);
+  }
+
+  .txt {
+    color: white;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+  }
+
+  .error {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
